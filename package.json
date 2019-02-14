@@ -1,5 +1,6 @@
 {
   "name": "hapi-cors-headers",
+  "version": "v1.0.3-k",
   "description": "hapi extension to enable CORS",
   "main": "index.js",
   "scripts": {
