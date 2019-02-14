@@ -12,14 +12,16 @@ all server response, securely from all origins, with `access-control-allow-crede
 ## Example
 
 ```js
-var Hapi = require('hapi')
-var corsHeaders = require('hapi-cors-headers')
+var Hapi = require('hapi');
+const corsHeaders = require('hapi-cors-headers')('localhost:8888', logger);
 
-var server = new Hapi.Server()
+var server = new Hapi.Server();
 // setup routes etc ...
 
-server.ext('onPreResponse', corsHeaders)
+server.ext('onPreResponse', corsHeaders);
 ```
+
+logger is option if not specified it will be console. The first arguments tells to cors-header to allow only on localhost:8888
 
 ## Install
 
